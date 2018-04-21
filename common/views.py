@@ -40,10 +40,10 @@ def news_page(request):
     if year == 'year' and month == 'month': # get last 5 news items if main
         news = news_item.objects.all().order_by('-pub_date')[0:5]
     elif year == 'year':
-        news = news_item.objects.filter(pub_date__month=int(month))
+        news = news_item.objects.filter(pub_date__month=int(month)).order_by('-pub_date')
         month = int(month)
     elif month == 'month':
-        news = news_item.objects.filter(pub_date__year=int(year))
+        news = news_item.objects.filter(pub_date__year=int(year)).order_by('-pub_date')
         year = int(year)
     else:
         year = int(year)
@@ -51,7 +51,7 @@ def news_page(request):
         dayrange = calendar.monthrange(year,month)
         start_date = date(year,month,1)
         end_date = date(year,month,dayrange[1])
-        news = news_item.objects.filter(pub_date__range=(start_date,end_date))
+        news = news_item.objects.filter(pub_date__range=(start_date,end_date)).order_by('-pub_date')
     return render(request, 'common/news.html',{
         'news': news,
         'year': year,
