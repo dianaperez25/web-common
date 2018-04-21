@@ -14,7 +14,7 @@
                 <div class="form-row">
                     <div class="form-group col">
                         <select name="year" class="form-control">
-                            <option value="year" selected>All Years</option>
+                            <option value="year" selected>Years</option>
                             {% for yearitem in yearnum %}
                             <option value="{{ yearitem }}" {% if year == yearitem %}selected{% endif %}>{{ yearitem }}</option>
                             {% endfor %}
@@ -22,7 +22,7 @@
                     </div>
                     <div class="form-group col">
                         <select name="month" class="form-control">
-                            <option value="month">All Months</option>
+                            <option value="month">Months</option>
                             {% for monthitem in monthnum %}
                             <option value="{{ monthitem }}"  {% if month == monthitem %}selected{% endif %}>{{ monthitem }}</option>
                             {% endfor %}
