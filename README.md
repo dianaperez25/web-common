@@ -1,6 +1,4 @@
-# web-common
-
-A common website backend for all my lab website projects
+# caterina lab website
 
 #### Folder Structure
 
