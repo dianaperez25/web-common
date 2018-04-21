@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://www.grattonlab.org/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://www.grattonlab.org/lab_members</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://www.grattonlab.org/publications</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://www.grattonlab.org/research</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://www.grattonlab.org/news</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://www.grattonlab.org/data_software</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>https://www.grattonlab.org/directions_contact</loc>
+  <changefreq>daily</changefreq>
+</url>
+
+</urlset>
