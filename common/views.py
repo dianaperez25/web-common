@@ -49,7 +49,7 @@ def news_page(request):
         year = int(year)
         month = int(month)
         dayrange = calendar.monthrange(year,month)
-        start_date = date(year,month,dayrange[0])
+        start_date = date(year,month,1)
         end_date = date(year,month,dayrange[1])
         news = news_item.objects.filter(pub_date__range=(start_date,end_date))
     return render(request, 'common/news.html',{
