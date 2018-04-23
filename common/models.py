@@ -123,7 +123,6 @@ class publication_link(models.Model):
     # Publication Link Name
     name = models.CharField(
         max_length = 350,
-        unique = True,
         null = True,
         blank = True,
         verbose_name = "Name"
@@ -148,7 +147,6 @@ class news_item(models.Model):
     # news title
     title = models.CharField(
         max_length = 350,
-        unique = True,
         verbose_name = "Title"
     )
 
