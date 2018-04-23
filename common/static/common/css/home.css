@@ -123,14 +123,16 @@ a:hover {
 }
 .people > div > .background {
     background-image: url("../imgs/neuron_cover3.png");
-    -webkit-filter: brightness(0.3);
-    filter: brightness(0.3);
+    -webkit-filter: brightness(0.75);
+    filter: brightness(0.75);
     background-position: 50% 40%;
 }
 .publications > div > .background {
-    background-image: url("../imgs/neuron_cover2.png");
-    -webkit-filter: brightness(0.75);
-    filter: brightness(0.75);
+    background-image: url("../imgs/powernetwork.jpeg");
+    -webkit-filter: brightness(0.6);
+    filter: brightness(0.6);
+    background-position: 0% 10%;
+    background-size: 1400px 910px;
 }
 .research > div > .background {
     background-image: url("../imgs/neuron_cover.png");
@@ -139,19 +141,20 @@ a:hover {
 }
 .news > div > .background {
     background-image: url("../imgs/SpringEmbedded_hubs.png");
-    -webkit-filter: brightness(0.5);
-    filter: brightness(0.5);
+    -webkit-filter: brightness(0.55);
+    filter: brightness(0.55);
 }
 .directions > div > .background {
     background-image: url("../imgs/corrmat.png");
-    -webkit-filter: brightness(0.5);
-    filter: brightness(0.5);
+    -webkit-filter: brightness(0.6);
+    filter: brightness(0.6);
 }
 .contact > div > .background {
-    background-image: url("../imgs/powernetwork.jpeg");
-    background-position: 10% 20%;
-    -webkit-filter: brightness(0.5);
-    filter: brightness(0.5);
+    background-image: url("../imgs/Northwestern-University.jpg");
+    background-position: 50% 50%;
+    background-size: 1000px 500px;
+    -webkit-filter: brightness(0.75);
+    filter: brightness(0.75);
 }
 .scroll-down {
     font-size: 60;
