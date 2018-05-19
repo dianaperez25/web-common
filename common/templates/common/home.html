@@ -89,17 +89,27 @@
 </div>
 <style>
 .sig-text {
-    color: black;
+    color: white;
+    visibility: hidden;
+    background-color: black;
+}
+.signature {
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    font-size: 8px;
 }
 .signature:hover > a > .sig-text {
-    color: white;
+    cursor: pointer;
+    visibility: visible;
 }
 </style>
-<div class="signature" style="position:absolute;bottom:1%;left:1%;font-size:8px;">
-     <a href="https://github.com/vanandrew" target="_blank">
-         <p class="sig-text" style="margin:0 0;">This site was designed and coded by Andrew Van.</p>
-         <p class="sig-text" style="margin:0 0;">Click to see my GitHub.</p>
-     </a>
+<div class="signature">
+    <a href="https://github.com/vanandrew" target="_blank">
+        <p class="sig-text" style="margin:0 0;">This site was designed</p>
+        <p class="sig-text" style="margin:0 0;">and coded by Andrew Van.</p>
+        <p class="sig-text" style="margin:0 0;">Click to see my GitHub.</p>
+    </a>
 </div>
 {% endblock %}
 
