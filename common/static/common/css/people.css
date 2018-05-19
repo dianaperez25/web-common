@@ -1,0 +1,13 @@
+.card-img-top {
+    cursor: pointer;
+}
+.portrait-text {
+  font-size: 1rem;
+}
+.modal-header {
+    border-bottom: none;
+    padding-bottom: 6;
+}
+.modal-body {
+    padding-top: 0;
+}
