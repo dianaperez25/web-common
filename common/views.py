@@ -13,8 +13,21 @@ def home_page(request):
 # lab member page
 def people_page(request):
     # Get all lab members
-    members = lab_member.objects.all().order_by('last_name')
-    return render(request, 'common/people.html', {'members': members})
+    members = lab_member.objects.all()
+    # Split members to render in different category
+    pi = lab_member.objects.filter(title='Principal Investigator')
+    postdoc = lab_member.objects.filter(title='Postdoctoral Researcher')
+    gradstudent = lab_member.objects.filter(title='Graduate Student')
+    ra = lab_member.objects.filter(title='Research Assistant')
+    other = members.difference(pi,postdoc,gradstudent,ra)
+    return render(request, 'common/people.html', {
+        'pi': pi,
+        'postdoc': postdoc,
+        'gradstudent': gradstudent,
+        'ra': ra,
+        'other': other,
+        'members': members
+        })
 
 # research
 def research_page(request):

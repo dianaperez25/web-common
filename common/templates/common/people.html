@@ -17,7 +17,126 @@
         </div>
         <div class="col-9 offset-2 col-md-9 offset-md-0 research-col animated fadeInRight content">
             <br><br><br>
-            {% for person in members %}
+            {% if pi %}
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <h1 class="display-4" style="font-size:2.0rem;">Principal Investigator</h1>
+                </div>
+            </div>
+            {% endif %}
+            {% for person in pi %}
+            {% cycle '<div class="row no-gutters">' '' '' %}
+                <div class="col-12 col-md-3 offset-md-1">
+                    <div class="card card-pad img-fluid" style="width: 14rem;">
+                        {% if person.photo %}
+                        <img class="card-img-top" src="{{ person.photo.url }}" data-toggle="modal" data-target="#{{ person.first_name }}{{ person.last_name }}">
+                        {% else %}
+                        <img class="card-img-top" src="{% static "common/imgs/person-placeholder.jpg"%}" data-toggle="modal" data-target="#{{ person.first_name }}{{ person.last_name }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="display-4 card-title portrait-text">{{ person.first_name }} {{ person.last_name }}</h5>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+            {% if forloop.last %}
+            </div>
+            {% else %}
+            {% cycle '' '' '</div>' %}
+            {% endif %}
+            {% endfor %}
+            {% if postdoc %}
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <h1 class="display-4" style="font-size:2.0rem;">Postdoctoral Researcher</h1>
+                </div>
+            </div>
+            {% endif %}
+            {% for person in postdoc %}
+            {% cycle '<div class="row no-gutters">' '' '' %}
+                <div class="col-12 col-md-3 offset-md-1">
+                    <div class="card card-pad img-fluid" style="width: 14rem;">
+                        {% if person.photo %}
+                        <img class="card-img-top" src="{{ person.photo.url }}" data-toggle="modal" data-target="#{{ person.first_name }}{{ person.last_name }}">
+                        {% else %}
+                        <img class="card-img-top" src="{% static "common/imgs/person-placeholder.jpg"%}" data-toggle="modal" data-target="#{{ person.first_name }}{{ person.last_name }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="display-4 card-title portrait-text">{{ person.first_name }} {{ person.last_name }}</h5>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+            {% if forloop.last %}
+            </div>
+            {% else %}
+            {% cycle '' '' '</div>' %}
+            {% endif %}
+            {% endfor %}
+            {% if gradstudent %}
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <h1 class="display-4" style="font-size:2.0rem;">Graduate Student</h1>
+                </div>
+            </div>
+            {% endif %}
+            {% for person in gradstudent %}
+            {% cycle '<div class="row no-gutters">' '' '' %}
+                <div class="col-12 col-md-3 offset-md-1">
+                    <div class="card card-pad img-fluid" style="width: 14rem;">
+                        {% if person.photo %}
+                        <img class="card-img-top" src="{{ person.photo.url }}" data-toggle="modal" data-target="#{{ person.first_name }}{{ person.last_name }}">
+                        {% else %}
+                        <img class="card-img-top" src="{% static "common/imgs/person-placeholder.jpg"%}" data-toggle="modal" data-target="#{{ person.first_name }}{{ person.last_name }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="display-4 card-title portrait-text">{{ person.first_name }} {{ person.last_name }}</h5>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+            {% if forloop.last %}
+            </div>
+            {% else %}
+            {% cycle '' '' '</div>' %}
+            {% endif %}
+            {% endfor %}
+            {% if ra %}
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <h1 class="display-4" style="font-size:2.0rem;">Research Assistant</h1>
+                </div>
+            </div>
+            {% endif %}
+            {% for person in ra %}
+            {% cycle '<div class="row no-gutters">' '' '' %}
+                <div class="col-12 col-md-3 offset-md-1">
+                    <div class="card card-pad img-fluid" style="width: 14rem;">
+                        {% if person.photo %}
+                        <img class="card-img-top" src="{{ person.photo.url }}" data-toggle="modal" data-target="#{{ person.first_name }}{{ person.last_name }}">
+                        {% else %}
+                        <img class="card-img-top" src="{% static "common/imgs/person-placeholder.jpg"%}" data-toggle="modal" data-target="#{{ person.first_name }}{{ person.last_name }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="display-4 card-title portrait-text">{{ person.first_name }} {{ person.last_name }}</h5>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+            {% if forloop.last %}
+            </div>
+            {% else %}
+            {% cycle '' '' '</div>' %}
+            {% endif %}
+            {% endfor %}
+            {% if other %}
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <h1 class="display-4" style="font-size:2.0rem;">Other</h1>
+                </div>
+            </div>
+            {% endif %}
+            {% for person in other %}
             {% cycle '<div class="row no-gutters">' '' '' %}
                 <div class="col-12 col-md-3 offset-md-1">
                     <div class="card card-pad img-fluid" style="width: 14rem;">
