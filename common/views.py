@@ -15,17 +15,23 @@ def people_page(request):
     # Get all lab members
     members = lab_member.objects.all()
     # Split members to render in different category
-    pi = lab_member.objects.filter(title='Principal Investigator')
-    postdoc = lab_member.objects.filter(title='Postdoctoral Researcher')
-    gradstudent = lab_member.objects.filter(title='Graduate Student')
-    ra = lab_member.objects.filter(title='Research Assistant')
-    other = members.difference(pi,postdoc,gradstudent,ra)
+    pi = lab_member.objects.filter(title='Principal Investigator',alumni=False)
+    staff = lab_member.objects.filter(title='Research Staff',alumni=False)
+    postdoc = lab_member.objects.filter(title='Postdoc',alumni=False)
+    gradstudent = lab_member.objects.filter(title='Graduate Student',alumni=False)
+    ra = lab_member.objects.filter(title='Research Assistant',alumni=False)
+    undergrad = lab_member.objects.filter(title='Undergraduate Student',alumni=False)
+    other = members.exclude(alumni=True).difference(pi,staff,postdoc,gradstudent,ra,undergrad)
+    alumni = lab_member.objects.filter(alumni=True)
     return render(request, 'common/people.html', {
         'pi': pi,
+        'staff': staff,
         'postdoc': postdoc,
         'gradstudent': gradstudent,
         'ra': ra,
+        'undergrad': undergrad,
         'other': other,
+        'alumni': alumni,
         'members': members
         })
 

@@ -40,7 +40,15 @@ class lab_member(models.Model):
         max_length = 70,
         null = True,
         blank = True,
-        verbose_name = "Title"
+        verbose_name = "Title",
+        choices = (
+            ('Principal Investigator','Principal Investigator'),
+            ('Research Staff','Research Staff'),
+            ('Postdoc','Postdoc'),
+            ('Graduate Student','Graduate Student'),
+            ('Research Assistant','Research Assistant'),
+            ('Undergraduate Student','Undergraduate Student')
+        )
     )
 
     # Field for member blurb

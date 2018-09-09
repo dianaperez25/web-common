@@ -45,10 +45,38 @@
             {% cycle '' '' '</div>' %}
             {% endif %}
             {% endfor %}
+            {% if staff %}
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <h1 class="display-4" style="font-size:2.0rem;">Research Staff</h1>
+                </div>
+            </div>
+            {% endif %}
+            {% for person in staff %}
+            {% cycle '<div class="row no-gutters">' '' '' %}
+                <div class="col-12 col-md-3 offset-md-1">
+                    <div class="card card-pad img-fluid" style="width: 14rem;">
+                        {% if person.photo %}
+                        <img class="card-img-top" src="{{ person.photo.url }}" data-toggle="modal" data-target="#{{ person.first_name }}{{ person.last_name }}">
+                        {% else %}
+                        <img class="card-img-top" src="{% static "common/imgs/person-placeholder.jpg"%}" data-toggle="modal" data-target="#{{ person.first_name }}{{ person.last_name }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="display-4 card-title portrait-text">{{ person.first_name }} {{ person.last_name }}</h5>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+            {% if forloop.last %}
+            </div>
+            {% else %}
+            {% cycle '' '' '</div>' %}
+            {% endif %}
+            {% endfor %}
             {% if postdoc %}
             <div class="row">
                 <div class="col-10 offset-1">
-                    <h1 class="display-4" style="font-size:2.0rem;">Postdoctoral Researcher</h1>
+                    <h1 class="display-4" style="font-size:2.0rem;">Postdocs</h1>
                 </div>
             </div>
             {% endif %}
@@ -76,7 +104,7 @@
             {% if gradstudent %}
             <div class="row">
                 <div class="col-10 offset-1">
-                    <h1 class="display-4" style="font-size:2.0rem;">Graduate Student</h1>
+                    <h1 class="display-4" style="font-size:2.0rem;">Graduate Students</h1>
                 </div>
             </div>
             {% endif %}
@@ -104,11 +132,39 @@
             {% if ra %}
             <div class="row">
                 <div class="col-10 offset-1">
-                    <h1 class="display-4" style="font-size:2.0rem;">Research Assistant</h1>
+                    <h1 class="display-4" style="font-size:2.0rem;">Research Assistants</h1>
                 </div>
             </div>
             {% endif %}
             {% for person in ra %}
+            {% cycle '<div class="row no-gutters">' '' '' %}
+                <div class="col-12 col-md-3 offset-md-1">
+                    <div class="card card-pad img-fluid" style="width: 14rem;">
+                        {% if person.photo %}
+                        <img class="card-img-top" src="{{ person.photo.url }}" data-toggle="modal" data-target="#{{ person.first_name }}{{ person.last_name }}">
+                        {% else %}
+                        <img class="card-img-top" src="{% static "common/imgs/person-placeholder.jpg"%}" data-toggle="modal" data-target="#{{ person.first_name }}{{ person.last_name }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="display-4 card-title portrait-text">{{ person.first_name }} {{ person.last_name }}</h5>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+            {% if forloop.last %}
+            </div>
+            {% else %}
+            {% cycle '' '' '</div>' %}
+            {% endif %}
+            {% endfor %}
+            {% if undergrad %}
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <h1 class="display-4" style="font-size:2.0rem;">Undergraduate Students</h1>
+                </div>
+            </div>
+            {% endif %}
+            {% for person in undergrad %}
             {% cycle '<div class="row no-gutters">' '' '' %}
                 <div class="col-12 col-md-3 offset-md-1">
                     <div class="card card-pad img-fluid" style="width: 14rem;">
@@ -137,6 +193,34 @@
             </div>
             {% endif %}
             {% for person in other %}
+            {% cycle '<div class="row no-gutters">' '' '' %}
+                <div class="col-12 col-md-3 offset-md-1">
+                    <div class="card card-pad img-fluid" style="width: 14rem;">
+                        {% if person.photo %}
+                        <img class="card-img-top" src="{{ person.photo.url }}" data-toggle="modal" data-target="#{{ person.first_name }}{{ person.last_name }}">
+                        {% else %}
+                        <img class="card-img-top" src="{% static "common/imgs/person-placeholder.jpg"%}" data-toggle="modal" data-target="#{{ person.first_name }}{{ person.last_name }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="display-4 card-title portrait-text">{{ person.first_name }} {{ person.last_name }}</h5>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+            {% if forloop.last %}
+            </div>
+            {% else %}
+            {% cycle '' '' '</div>' %}
+            {% endif %}
+            {% endfor %}
+            {% if alumni %}
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <h1 class="display-4" style="font-size:2.0rem;">Lab Alumni</h1>
+                </div>
+            </div>
+            {% endif %}
+            {% for person in alumni %}
             {% cycle '<div class="row no-gutters">' '' '' %}
                 <div class="col-12 col-md-3 offset-md-1">
                     <div class="card card-pad img-fluid" style="width: 14rem;">
