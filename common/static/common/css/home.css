@@ -16,7 +16,7 @@ a:hover {
     width: 100%;
     position: absolute;
     z-index: 0;
-    background-image: url("https://cdn.rawgit.com/cgratton/web-common/caterina/common/static/common/imgs/silhouette.png");
+    background-image: url("https://cdn.jsdelivr.net/gh/cgratton/web-common@caterina/common/static/common/imgs/silhouette.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -122,35 +122,35 @@ a:hover {
     height: 100%;
 }
 .people > div > .background {
-    background-image: url("https://cdn.rawgit.com/cgratton/web-common/caterina/common/static/common/imgs/neuron_cover3.png");
+    background-image: url("https://cdn.jsdelivr.net/gh/cgratton/web-common@caterina/common/static/common/imgs/neuron_cover3.png");
     -webkit-filter: brightness(0.75);
     filter: brightness(0.75);
     background-position: 50% 40%;
 }
 .publications > div > .background {
-    background-image: url("https://cdn.rawgit.com/cgratton/web-common/caterina/common/static/common/imgs/powernetwork.jpeg");
+    background-image: url("https://cdn.jsdelivr.net/gh/cgratton/web-common@caterina/common/static/common/imgs/powernetwork.jpeg");
     -webkit-filter: brightness(0.6);
     filter: brightness(0.6);
     background-position: 0% 10%;
     background-size: 1400px 910px;
 }
 .research > div > .background {
-    background-image: url("https://cdn.rawgit.com/cgratton/web-common/caterina/common/static/common/imgs/neuron_cover.png");
+    background-image: url("https://cdn.jsdelivr.net/gh/cgratton/web-common@caterina/common/static/common/imgs/neuron_cover.png");
     -webkit-filter: brightness(0.8);
     filter: brightness(0.8);
 }
 .news > div > .background {
-    background-image: url("https://cdn.rawgit.com/cgratton/web-common/caterina/common/static/common/imgs/SpringEmbedded_hubs.png");
+    background-image: url("https://cdn.jsdelivr.net/gh/cgratton/web-common@caterina/common/static/common/imgs/SpringEmbedded_hubs.png");
     -webkit-filter: brightness(0.55);
     filter: brightness(0.55);
 }
 .directions > div > .background {
-    background-image: url("https://cdn.rawgit.com/cgratton/web-common/caterina/common/static/common/imgs/corrmat.png");
+    background-image: url("https://cdn.jsdelivr.net/gh/cgratton/web-common@caterina/common/static/common/imgs/corrmat.png");
     -webkit-filter: brightness(0.6);
     filter: brightness(0.6);
 }
 .contact > div > .background {
-    background-image: url("https://cdn.rawgit.com/cgratton/web-common/caterina/common/static/common/imgs/Northwestern-University.jpg");
+    background-image: url("https://cdn.jsdelivr.net/gh/cgratton/web-common@caterina/common/static/common/imgs/Northwestern-University.jpg");
     background-position: 50% 50%;
     background-size: 1000px 500px;
     -webkit-filter: brightness(0.75);
