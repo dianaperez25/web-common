@@ -94,12 +94,14 @@ $(window).ready(function(){
     var numcol = $('.topic-col').length;
     // Initialize the scroll bar position
     var prevScrPos = 0;
-    // Specify the perion to ignore furter scroll events
+    // Specify the period to ignore further scroll events
     var quietPeriod = 1100;
     // Initialize the time last animation started
     var lastanimation = new Date().getTime() - quietPeriod;
     // Bind the scroll event
-    $(document).bind('wheel', function(event) {
+    window.addEventListener('wheel', function(event) {
+        // Get scroll
+        let delta = event.deltaY;
         // Disable scroll
         event.preventDefault();
         // Get start time of animation
@@ -107,7 +109,6 @@ $(window).ready(function(){
         if (timeNow - lastanimation < quietPeriod) {
             return;
         }
-        let delta = event.originalEvent.deltaY;
         let scrolltype = ((delta>0)?'down':'up');
         // decision
         if (scrolltype == 'down') {
@@ -127,7 +128,7 @@ $(window).ready(function(){
         // set new prev scroll
         prevScrPos = prevScrPos + move;
         lastanimation = timeNow
-    });
+    }, {passive: false}); // make non-passive event
 });
 </script>
 {% endblock %}
